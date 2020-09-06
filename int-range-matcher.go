@@ -25,6 +25,7 @@ func (i *intRangeMatcher) Matches(x interface{}) bool {
 	return i.lowerBound <= inp && inp <= i.upperBound
 }
 
+// IntRangeMatcher will return a new Int range matcher.
 func IntRangeMatcher(lowerBound, upperBound int) gomock.Matcher {
 	return &intRangeMatcher{lowerBound: lowerBound, upperBound: upperBound}
 }

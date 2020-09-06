@@ -26,7 +26,7 @@ func (s *stringRegexpMatcher) Matches(x interface{}) bool {
 	return s.reg.Match([]byte(st))
 }
 
-// Will return a new string regexp matcher
+// Will return a new string regexp matcher.
 func StringRegexpMatcher(regexSt string) gomock.Matcher {
 	return &stringRegexpMatcher{
 		reg: regexp.MustCompile(regexSt),

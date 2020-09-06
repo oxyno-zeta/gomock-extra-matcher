@@ -7,7 +7,7 @@ import (
 	"github.com/golang/mock/gomock"
 )
 
-// StMatcher interface improved to add functions
+// StMatcher interface improved to add functions.
 type StMatcher interface {
 	gomock.Matcher
 	// Add a matcher for a specific field
@@ -113,5 +113,5 @@ func (f *structMatcher) Matches(x interface{}) bool {
 	return res
 }
 
-// StructMatcher will return a new struct matcher
+// StructMatcher will return a new struct matcher.
 func StructMatcher() StMatcher { return &structMatcher{} }

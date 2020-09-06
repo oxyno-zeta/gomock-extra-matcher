@@ -7,7 +7,7 @@ import (
 	"github.com/golang/mock/gomock"
 )
 
-// MMatcher interface improved to add functions
+// MMatcher interface improved to add functions.
 type MMatcher interface {
 	gomock.Matcher
 	// Add a matcher for a specific key
@@ -139,5 +139,5 @@ func (m *mapMatcher) Key(key interface{}, match interface{}) MMatcher {
 	return m
 }
 
-// MapMatcher will return a new map matcher
+// MapMatcher will return a new map matcher.
 func MapMatcher() MMatcher { return &mapMatcher{} }
