@@ -32,7 +32,7 @@ code/lint: setup/dep/install
 
 .PHONY: test/unit
 test/unit: setup/dep/install
-	$(GO) test $(GO_VENDOR) -v -coverpkg=./pkg/... -coverprofile=c.out.tmp ./pkg/...
+	$(GO) test $(GO_VENDOR) -v -coverpkg=./... -coverprofile=c.out.tmp ./...
 
 .PHONY: test/coverage
 test/coverage:
