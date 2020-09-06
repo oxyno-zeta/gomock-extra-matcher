@@ -25,7 +25,7 @@ func Test_stringRegexp_String(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			s := &stringRegexp{
+			s := &stringRegexpMatcher{
 				reg: tt.fields.reg,
 			}
 			if got := s.String(); got != tt.want {
@@ -85,7 +85,7 @@ func Test_stringRegexp_Matches(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			s := &stringRegexp{
+			s := &stringRegexpMatcher{
 				reg: tt.fields.reg,
 			}
 			if got := s.Matches(tt.args.x); got != tt.want {
@@ -102,14 +102,14 @@ func TestStringRegexpMatcher(t *testing.T) {
 	tests := []struct {
 		name string
 		args args
-		want *stringRegexp
+		want *stringRegexpMatcher
 	}{
 		{
 			name: "constructor",
 			args: args{
 				regexSt: "^a$",
 			},
-			want: &stringRegexp{
+			want: &stringRegexpMatcher{
 				reg: regexp.MustCompile("^a$"),
 			},
 		},

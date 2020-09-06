@@ -7,15 +7,15 @@ import (
 	"github.com/golang/mock/gomock"
 )
 
-type stringRegexp struct {
+type stringRegexpMatcher struct {
 	reg *regexp.Regexp
 }
 
-func (s *stringRegexp) String() string {
+func (s *stringRegexpMatcher) String() string {
 	return fmt.Sprintf("input matching regexp %s", s.reg.String())
 }
 
-func (s *stringRegexp) Matches(x interface{}) bool {
+func (s *stringRegexpMatcher) Matches(x interface{}) bool {
 	// Try to cast input as string
 	st, ok := x.(string)
 	// Check if it is a string
@@ -28,7 +28,7 @@ func (s *stringRegexp) Matches(x interface{}) bool {
 
 // Will return a new string regexp matcher
 func StringRegexpMatcher(regexSt string) gomock.Matcher {
-	return &stringRegexp{
+	return &stringRegexpMatcher{
 		reg: regexp.MustCompile(regexSt),
 	}
 }
