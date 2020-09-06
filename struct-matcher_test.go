@@ -323,3 +323,19 @@ func Test_structMatcher_Matches(t *testing.T) {
 		})
 	}
 }
+
+func TestStructMatcher(t *testing.T) {
+	tests := []struct {
+		name string
+		want StMatcher
+	}{
+		{name: "constructor", want: &structMatcher{}},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := StructMatcher(); !reflect.DeepEqual(got, tt.want) {
+				t.Errorf("StructMatcher() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
