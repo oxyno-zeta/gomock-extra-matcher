@@ -10,7 +10,7 @@ jobs:
       - run: semantic-release --ci --dry-run
   lint:
     docker:
-      - image: circleci/golang:1.15
+      - image: circleci/golang:1.17
     working_directory: /go/src/github.com/oxyno-zeta/gomock-extra-matcher
     steps:
       - checkout
@@ -21,7 +21,7 @@ jobs:
             - "/go/pkg/"
   test:
     docker:
-      - image: circleci/golang:1.15
+      - image: circleci/golang:1.17
     working_directory: /go/src/github.com/oxyno-zeta/gomock-extra-matcher
     steps:
       - checkout
