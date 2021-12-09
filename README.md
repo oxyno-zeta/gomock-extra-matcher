@@ -126,7 +126,7 @@ type Fake struct {
     Data map[string]string
 }
 */
-mock.EXPECT().DoSomething(extra.MapMatcher().Field("Name", "value1").Field("Data", gomock.Eq(map[string]string{"fake":"value"})))
+mock.EXPECT().DoSomething(extra.StructMatcher().Field("Name", "value1").Field("Data", gomock.Eq(map[string]string{"fake":"value"})))
 ```
 
 ## Thanks
