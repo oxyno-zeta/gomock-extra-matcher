@@ -129,6 +129,18 @@ type Fake struct {
 mock.EXPECT().DoSomething(extra.StructMatcher().Field("Name", "value1").Field("Data", gomock.Eq(map[string]string{"fake":"value"})))
 ```
 
+### OrMatcher
+
+#### Explanation
+
+This matcher will allow to test multiple matchers with a logical "OR" between them. This will stop at first match.
+
+#### Example
+
+```go
+mock.EXPECT().DoSomething(extra.OrMatcher(gomock.Eq(1), gomock.Eq(10), gomock.Eq(15)))
+```
+
 ## Thanks
 
 - My wife BH to support me doing this
