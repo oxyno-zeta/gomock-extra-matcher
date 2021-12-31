@@ -330,11 +330,9 @@ linters:
     - typecheck
     - bodyclose
     - noctx
-    - golint
     - rowserrcheck
     - stylecheck
     - gosec
-    - interfacer
     - unconvert
     - dupl
     - goconst
@@ -342,14 +340,12 @@ linters:
     - gofmt
     - goimports
     - goheader
-    - maligned
     - depguard
     - misspell
     - lll
     - unparam
     - dogsled
     - nakedret
-    - scopelint
     - gocritic
     - gochecknoinits
     - godox
@@ -364,6 +360,17 @@ linters:
     - sqlclosecheck
     - nlreturn
     - nolintlint
+    - forcetypeassert
+    - gomoddirectives
+    - importas
+    - nilerr
+    - promlinter
+    - revive
+    - wastedassign
+    - bidichk
+    - contextcheck
+    - nilnil
+    - tenv
   disable:
     - prealloc
     - gochecknoglobals
@@ -375,6 +382,9 @@ linters:
     - gci
     - goerr113 # Forbid dynamic errors
     - nestif
+    - scopelint
+    - ireturn
+    - varnamelen
   disable-all: false
   presets:
     - bugs

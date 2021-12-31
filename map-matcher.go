@@ -78,11 +78,11 @@ func (m *mapMatcher) Matches(x interface{}) bool {
 		// Store if matcher key can be found
 		matchKeyFound := false
 		// Loop over map keys
-		for _, kVal := range rval.MapKeys() {
+		for _, keyVal := range rval.MapKeys() {
 			// Get key data
-			keyD := kVal.Interface()
+			keyD := keyVal.Interface()
 			// Get reflect value from key
-			rv := rval.MapIndex(kVal)
+			rv := rval.MapIndex(keyVal)
 			// Get data from key
 			val := rv.Interface()
 			// Check if matcher key is matching current key

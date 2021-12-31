@@ -23,7 +23,7 @@ func (s *stringRegexpMatcher) Matches(x interface{}) bool {
 		return false
 	}
 
-	return s.reg.Match([]byte(st))
+	return s.reg.MatchString(st)
 }
 
 // Will return a new string regexp matcher.
