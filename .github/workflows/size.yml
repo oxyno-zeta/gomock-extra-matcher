@@ -2,7 +2,7 @@ name: "Add size label"
 on: pull_request
 jobs:
   size-label:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
       - name: size-label
         uses: pascalgn/size-label-action@a4655c448bb838e8d73b81e97fd0831bb4cbda1e
