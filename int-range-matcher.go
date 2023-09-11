@@ -3,7 +3,7 @@ package extra
 import (
 	"fmt"
 
-	"github.com/golang/mock/gomock"
+	"go.uber.org/mock/gomock"
 )
 
 type intRangeMatcher struct {
