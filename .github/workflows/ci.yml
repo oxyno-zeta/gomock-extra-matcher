@@ -42,7 +42,7 @@ jobs:
           go-version: "^1.17.0"
       - run: make test/unit
       - run: make test/coverage
-      - run: go get github.com/mattn/goveralls
+      - run: go install github.com/mattn/goveralls@latest
       - env:
           COVERALLS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: goveralls -coverprofile=c.out -service=github
