@@ -15,8 +15,8 @@ type StMatcher interface {
 }
 
 type sStorage struct {
-	fName string
 	match interface{}
+	fName string
 }
 
 type structMatcher struct {
