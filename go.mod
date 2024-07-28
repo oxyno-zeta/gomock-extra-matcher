@@ -2,4 +2,4 @@ module github.com/oxyno-zeta/gomock-extra-matcher
 
 go 1.15
 
-require go.uber.org/mock v0.2.0
+require go.uber.org/mock v0.4.0
